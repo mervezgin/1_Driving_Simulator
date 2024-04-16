@@ -5,16 +5,10 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     [SerializeField] GameObject vehiclePlayer;
-    [SerializeField] Vector3 offset = new Vector3(0, 8, -10);
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] Vector3 offset = new Vector3(0, 8, -10); //offset değişkeni kamera ile araç(player) arasındaki mesafe için
 
     void LateUpdate()
     {
-        transform.position = vehiclePlayer.transform.position + offset;
+        transform.position = vehiclePlayer.transform.position + offset; //main cameranın aracı takip etmesi için
     }
 }

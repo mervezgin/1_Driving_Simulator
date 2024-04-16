@@ -12,20 +12,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] TextMeshProUGUI rpmText;
     [SerializeField] List<WheelCollider> allWheels;
 
-    [SerializeField] int wheelsOnGround;
 
     float horsePower = 25000.0f;
     float turnSpeed = 20.0f;
     float horizontalInput;
-    float verticalInput;
+    float verticalInput; //Inputlar aracı klavyenin ok tuşlarıyla kullanmak için
     float speed;
     float rpm;
+    int wheelsOnGround; //araç yoldan düştüğü zaman tekerler dönmesin diye 
 
     // Start is called before the first frame update
     void Start()
     {
-        playerRb = GetComponent<Rigidbody>();
-        playerRb.centerOfMass = CenterOfMass.transform.position;
+        playerRb = GetComponent<Rigidbody>(); 
+        playerRb.centerOfMass = CenterOfMass.transform.position; 
     }
 
     // Update is called once per frame
