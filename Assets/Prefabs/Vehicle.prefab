@@ -447,7 +447,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CenterOfMass: {fileID: 8407152371481723866}
   speedometerText: {fileID: 0}
-  speed: 0
+  rpmText: {fileID: 0}
+  allWheels:
+  - {fileID: 8727667775283268653}
+  - {fileID: 4032468459945217959}
+  - {fileID: 945680413682307696}
+  - {fileID: 6000307999457100956}
 --- !u!1 &7746918531571588263
 GameObject:
   m_ObjectHideFlags: 0

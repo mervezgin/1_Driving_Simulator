@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject CenterOfMass;
     [SerializeField] TextMeshProUGUI speedometerText;
     [SerializeField] TextMeshProUGUI rpmText;
+    [SerializeField] List<WheelCollider> allWheels;
+
+    [SerializeField] int wheelsOnGround;
 
     float horsePower = 25000.0f;
     float turnSpeed = 20.0f;
@@ -31,14 +34,39 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-        speed = Mathf.RoundToInt(playerRb.velocity.magnitude * 2.237f);
-        speedometerText.SetText("Speed: " + speed + " mph");
+        if (IsOnGround())
+        {
+            playerRb.AddRelativeForce(Vector3.forward * horsePower * verticalInput);
+            //transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
+            transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
+            speed = Mathf.RoundToInt(playerRb.velocity.magnitude * 2.237f);
+            speedometerText.SetText("Speed: " + speed + " mph");
 
-        rpm = (speed % 30) * 40;
-        rpmText.SetText("RPM: " + rpm);
+            rpm = (speed % 30) * 40;
+            rpmText.SetText("RPM: " + rpm);
+        }
+        
+    }
 
-        playerRb.AddRelativeForce(Vector3.forward * horsePower * verticalInput);
-        //transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
-        transform.Rotate(Vector3.up, Time.deltaTime * turnSpeed * horizontalInput);
+    bool IsOnGround()
+    {
+        wheelsOnGround = 0;
+
+        foreach (WheelCollider wheel in allWheels)
+        {
+            if (wheel.isGrounded)
+            {
+                wheelsOnGround++;
+            }
+        }
+
+        if (wheelsOnGround == 4)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
