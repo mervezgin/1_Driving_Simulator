@@ -528,6 +528,11 @@ LightingSettings:
   m_PVRTiledBaking: 0
   m_NumRaysToShootPerTexel: -1
   m_RespectSceneVisibilityWhenBakingGI: 0
+--- !u!1 &498500565 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6702807206382673186, guid: 21e61facf33c048c8a779a2071fe6c8c, type: 3}
+  m_PrefabInstance: {fileID: 906852463302540539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,9 +635,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1b40af9d02e34c48902603559d5dcd7, type: 3}
+  m_Script: {fileID: 11500000, guid: dcbd6a526b453481a9fd3b4cb19683e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vehiclePlayer: {fileID: 498500565}
 --- !u!1001 &966225161
 PrefabInstance:
   m_ObjectHideFlags: 0
