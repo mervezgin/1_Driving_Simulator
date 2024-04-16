@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 2300059245696473713}
   - component: {fileID: 747165134880344936}
   - component: {fileID: 120214668509384716}
+  - component: {fileID: 6315125976836365141}
   m_Layer: 0
   m_Name: Vehicle
   m_TagString: Untagged
@@ -432,6 +433,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6315125976836365141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6702807206382673186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c86dde1a90a841f9b6be312ae38f02a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 15
 --- !u!1 &7746918531571588263
 GameObject:
   m_ObjectHideFlags: 0
