@@ -639,6 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vehiclePlayer: {fileID: 498500565}
+  offset: {x: 0, y: 8, z: -10}
 --- !u!1001 &966225161
 PrefabInstance:
   m_ObjectHideFlags: 0
