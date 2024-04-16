@@ -445,8 +445,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c86dde1a90a841f9b6be312ae38f02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horsePower: 25000
   CenterOfMass: {fileID: 8407152371481723866}
+  speedometerText: {fileID: 0}
+  speed: 0
 --- !u!1 &7746918531571588263
 GameObject:
   m_ObjectHideFlags: 0
